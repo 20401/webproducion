@@ -1,0 +1,272 @@
+ //DESTOK//
+ .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    }
+    //ESTILOS PAGINA ACTIVIDAD ECONOMICA PANTALLA GRANDE//
+
+    img.act-img2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 14%;
+        margin: 10px;
+    }
+
+    .imagen-izquierda {
+        text-align: center;
+        width: 86rem;
+    }
+
+    .act-content {
+        display: flex;
+        padding: 20px 0;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        margin: 25px auto;
+    }
+    
+    h1.title-act {
+        font-size: 37px;
+        padding-left: 90px;
+        color: #1766df;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    p.act-parrafo {
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 1.8rem;
+        padding-left: 90px;
+        width: 98%;
+        text-align: justify;
+    }
+
+    img.act-img {
+        width: 98%;
+        padding-left: 90px;
+        height: 257px;
+        box-sizing: border-box;
+    }
+    
+    //ESTILOS PAGINA RECURSOS PARA SU NEGOCIO PANTALLA GRANDE//
+    .page-wrapper {
+        .columns{
+            .ag-header {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            h1.ag-title {
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                font-size: 30px;
+                
+            }
+            .ag-hr {
+                height: 1px;
+                border-color: black;
+                position: relative;
+                bottom: 15px;
+                width: 50%;
+            }
+            .ag-hr1{
+                height: 1px;
+                border-color: black;
+                position: relative;
+                bottom: 40px;
+                width: 50%;
+        
+            }
+            p.ag-parrafo2{
+                font-size: 17px;
+                padding: 0px 17px;
+                text-align: justify;
+            }
+            p.ag-parrafo {
+                font-size: 16px;
+                padding: 0 8%;
+                box-sizing: border-box;
+            }
+            h2.ag-h2 {
+                font-weight: 600;
+                font-size: 17px;
+                padding-left: 20px;          
+            }
+          
+            button.ag-button {
+                border: 2px;
+                background-color: white;
+                text-align: start;
+            }
+            a.ag-a {
+                color: #ff5501;
+            }
+            .ag-content {
+                display: flex;
+                background-color: #ffffff;
+                margin-bottom: 47px;
+                justify-content: center;
+                position: relative;
+                bottom: 50px;
+            }
+          .ag-principal {
+                background-color: #ffffff; 
+                max-width: 1280px;
+                margin: 80px auto 30px; 
+                box-sizing: border-box;
+                padding: 0 100px 40px;
+            }
+            img.ag-img {
+                width: 100%;
+                height: 191px;
+            }
+            .ag-content-medio {
+                margin: 13px 17px;
+                width: 33.33%; 
+            }
+            .ag-section {
+                border: 1px solid #b4b4b4;
+                height: auto;
+                min-height: 391px;
+                width: 100%;
+            }
+        }
+    }
+}
+   
+//ESTILOS DE VISTA MOVIL ACTIVIDAD ECONOMICA//
+              
+& when (@media-common =true) {
+    
+    img.act-img2 {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+        left: 5px;
+        margin: 5px;
+        bottom: 10px;
+    }
+
+    h1.title-act{
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    p.act-parrafo {
+        font-size: 1.9rem;
+        font-weight: 500;
+        text-align: justify;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    img.act-img {
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .footer.content {
+        width: 85%;
+        position: relative;
+        left: 8px;
+        border: groove;
+    }
+    .copyright {
+        background-color: #6e716e;
+        color: #ffffff;
+        box-sizing: border-box;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        top: 30px;
+      
+    }
+
+    .imagen-izquierda {
+        text-align: center;
+        width: 36rem;
+        margin: 0 auto;
+    }
+
+    //ESTILOS DE VISTA MOVIL RECURSOS PARA SU NEGOCIO/
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+
+        h1.ag-title {
+            font-size: 25px;
+            font-weight: 600;
+            padding: 5px;
+            justify-content: center;
+            display: flex;
+    }
+    .ag-hr {
+        height: 1px;
+        border-color: black;
+        position: relative;
+        bottom: 22px;
+        width: 100%;
+    }
+    .ag-hr1 {
+        height: 1px;
+        border-color: black;
+        position: relative;
+        bottom: 41px;
+        width: 100%;
+    }
+    p.ag-parrafo2 {
+        font-size: 17px;
+        padding: 0px 17px;
+        text-align: justify;
+
+    }
+    p.ag-parrafo {
+        font-size: 17px;
+        padding: 0px 17px;
+        position: relative;
+        bottom: 49px;
+        text-align: center;
+    }
+    h2.ag-h2 {
+        font-weight: 600;
+        font-size: 17px;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+    }
+    button.ag-button {
+        width: 100%;
+        background-color: white;
+        padding-left: 20px;
+    }
+    a.ag-a {
+        color: #ff5501;
+    }
+    .ag-content {
+        background-color: #ffffff;
+    }
+    img.ag-img {
+        width: 96%;
+        margin: 5px;
+    }
+
+    .ag-header {
+        background-color: #ffffff;
+    }
+}
+    
+        
+    
+    
+      
+    
+  

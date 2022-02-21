@@ -1,0 +1,161 @@
+@import "_variables.less";
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+        .page-wrapper{
+            .page-main{
+                .columns{
+                    .column{
+                        .widget{
+                            .container_banner_helpcenter{
+                                .pagebuilder-column-group{
+                                    .pagebuilder-column{
+                                        .img_hadden_mobile{
+                                            display: @ocultar;
+                                        }
+                                    }
+                                }
+                            }
+                            .container_content{
+                                margin-left: @medidas-para-mobil;
+                                padding: 120px 0px;
+                                .row-full-width-inner{
+                                    h1{
+                                        font-weight: @font_negrita;
+                                    }
+                                    .pagebuilder-column-group{
+                                        .column_hover{
+                                            max-width: 95%;
+                                            .pagebuilder-button-link{
+                                                span{
+                                                    color:#005c45;
+                                                }
+                                            }
+                                        }
+                                        .column_hover:hover{
+                                            cursor: pointer;
+                                            position: relative;
+                                            bottom: 10px;
+                                            transition: all 4s ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+                            .row-full-width-inner{
+                                .tittle_Featured_articles{
+                                    font-weight:@font_negrita;
+                                    font-size: 34px;
+                                }
+                                .pagebuilder-column-group{
+                                    .pagebuilder-column{
+                                        .contact_us{
+                                            .pagebuilder-button-link{
+                                                color:#005c45;
+                                            }
+                                            .pagebuilder-button-link:hover{
+                                                color: #013d30;
+                                                text-decoration: @ocultar;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                        .boton_position{
+                                            position: relative;
+                                            bottom: 27px;
+                                            left: 24px;
+                                            .pagebuilder-button-link{
+                                                padding:0;
+                                                margin: 0;
+                                                color:#56617a;
+                                            }
+                                            .pagebuilder-button-link:hover{
+                                                cursor: pointer;
+                                                color: #005c45;
+                                                text-decoration: @ocultar;
+                                                transition: all .4s ease-in-out;
+                                            }
+                                        }
+                                        .person_lazand{
+                                            .pagebuilder-mobile-only{
+                                                width: 600px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .pagebuilder-column-group{
+                                .pagebuilder-column{
+                                    h2{
+                                        font-size: 47px ;
+                                        font-weight: @font_negrita;
+                                        color: @color_text;
+                                        padding-top: 64px;
+                                    }
+                                    p{
+                                        color: rgba(255,255,255,.7);
+                                        font-weight: @font_negrita;
+                                        font-size: 16px;
+                                        line-height: 19px;
+                                    }
+                                    .container_text_banner{
+                                        display: @ocultar;
+                                        display: @ocultar;
+                                        .widget{
+                                            .container_link_banner{
+                                                .list_buntton{
+                                                    display:flex;
+                                                    padding: 0;
+                                                    li{
+                                                        padding-right: 7px;
+                                                        list-style: @ocultar;
+                                                        a{
+                                                            color:@color_text;
+                                                            text-decoration: @ocultar;
+                                                            border-bottom: 3px solid #f9fafc;
+                                                            font-size: 16px;
+                                                        }
+                                                        a:hover{
+                                                            color: #fafbfd;
+                                                            opacity: .7;
+                                                            border-bottom: 3px solid #f9fafc;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .container_input{
+                                        display:flex;
+                                        justify-content: space-around;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        background-color: @color_text;
+                                        //width: 650px;
+                                        height: 78px;
+                                        border-radius: 8px;
+                                        input{
+                                            padding: 22px;
+                                            width: 85%;
+                                            Height: 45px;
+                                            border-radius: 5px;
+                                            border: @ocultar;
+                                        }
+                                        input:focus{
+                                            box-shadow:@ocultar;
+                                        }
+                                        .container_input_icon{
+                                            background-color: #008060;
+                                            width: 54px;
+                                            height: 54px;
+                                            border-radius: 5px;
+                                            display: grid;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

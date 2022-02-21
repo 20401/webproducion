@@ -1,0 +1,59 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .page-wrapper{
+        .nav-sections, .navigation{
+            color: #fff;
+        }
+        .nav-sections{            
+            .section-item-title{
+                padding-top: 15px;
+                width: 25.33%;
+                padding: 10px;
+            }
+            .nav-sections-item-switch{
+                color: rgb(6, 47, 109);
+                font-size: 25px;
+            }
+            .section-item-content{
+                padding: 0px 25px;
+            }
+            .level0{
+                padding: 10px 0px;
+                border-bottom: 1px solid rgb(6, 47, 109);
+                border-top: none;
+                font-size: 22px;
+            }
+            .all-category{
+                display: none;
+            }
+            .navigation a{
+                color: #000;
+            }
+            .navigation a:hover{
+                color: rgb(6, 47, 109);
+            }
+            .navigation li.level0:last-child{
+                border-bottom: 1px solid rgb(6, 47, 109);
+            }
+            .nav-sections-item-content{
+                margin-top: 45px;
+            }        
+            
+        }
+    }
+}
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-wrapper{
+        .nav-sections{
+            .section-item-content{
+                display: none;
+            }
+        }
+    }
+}

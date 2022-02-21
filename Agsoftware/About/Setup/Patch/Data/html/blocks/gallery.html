@@ -1,0 +1,72 @@
+<style>#html-body [data-pb-style=LBRI2AW]{justify-content:center;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;min-height:120vh;padding-top:60px;padding-bottom:60px}</style><div data-content-type="row" data-appearance="full-width" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="LBRI2AW"><div class="row-full-width-inner" data-element="inner"><div data-content-type="html" data-appearance="default" data-element="main">&lt;div class="gallery"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image1.png}}" alt="" class="gallery__image gallery__image1"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image2.png}}" alt="" class="gallery__image gallery__image2"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image3.png}}" alt="" class="gallery__image gallery__image3"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image4.png}}" alt="" class="gallery__image gallery__image4"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image5.png}}" alt="" class="gallery__image gallery__image5"&gt;
+    &lt;img src="{{media url=wysiwyg/homeimages/gallery-image6.png}}" alt="" class="gallery__image gallery__image6"&gt;
+&lt;/div&gt;
+</div><div data-content-type="html" data-appearance="default" data-element="main">&lt;style&gt;
+:root {
+    --title-color: #00221C;
+    --text-color: #677788;
+}
+
+.gallery {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    display: grid;
+    grid-template-areas:    "none1   image2  none    none2"
+                            "none1   image2  image4  none2"
+                            "image1 image2  image4  image6"
+                            "image1 image3  image4  image6"
+                            "image1 image3  image5  image6"
+                            "none3  image3  image5  none5"
+                            "none4   none4    image5  none5";
+    gap: 15px;
+}
+
+.gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__image.gallery__image1 {
+    grid-area: image1;
+}
+.gallery__image.gallery__image2 {
+    grid-area: image2;
+}
+.gallery__image.gallery__image3 {
+    grid-area: image3;
+}
+.gallery__image.gallery__image4 {
+    grid-area: image4;
+}
+.gallery__image.gallery__image5 {
+    grid-area: image5;
+}
+.gallery__image.gallery__image6 {
+    grid-area: image6;
+}
+
+@media screen and (max-width: 767px) {
+    .gallery {
+        grid-template:  "image2 none1"
+                        "image2 image4"
+                        "image2 image4"
+                        "image3 image5"
+                        "image3 image5"
+                        "none2 image5";
+        width: 98%;
+        height: 98%;
+    }
+
+    .gallery__image.gallery__image1,
+    .gallery__image.gallery__image6 {
+        display: none;
+    }
+}
+&lt;/style&gt;</div></div></div>

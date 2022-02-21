@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ *  General template for displaying group of blocks divided into sections
+ */
+
+$group = $block->getGroupName();
+$groupCss = $block->getGroupCss();
+?>
+<?php if ($detailedInfoGroup = $block->getGroupChildNames($group)) : ?>
+    <div class="sections <?= $block->escapeHtmlAttr($groupCss) ?>">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="section-items <?= $block->escapeHtmlAttr($groupCss) ?>-items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+            <?php foreach ($detailedInfoGroup as $key => $name) : ?>
+                <?php if ($key == 0) : ?>
+                    <?php
+                    $html = $layout->renderElement($name);
+                    if (!trim($html) && ($block->getUseForce() != true)) {
+                        continue;
+                    }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                    ?>
+                    <div class="section-item-title <?= $block->escapeHtmlAttr($groupCss) ?>-item-title" data-role="collapsible">
+                        <a class="<?= $block->escapeHtmlAttr($groupCss) ?>-item-switch" data-toggle="switch" href="#<?= $block->escapeHtmlAttr($alias) ?>">
+                            <?= /* @noEscape */ $label ?>
+                        </a>
+                    </div>
+                    <div class="section-item-content <?= $block->escapeHtmlAttr($groupCss) ?>-item-content" id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
+                        <nav class="navigation" data-action="navigation">
+                            <ul id="menu" data-mage-init='{"menu":{"responsive":true, "expanded":true, "delay": 200, "position":{"my":"left top","at":"left+10 top+30"}}}'>
+                                <li class="level0 level-top ui-menu-item">Inicio</li>
+                                <li class="level0 level-top parent ui-menu-item">¿Que ofrecemos?
+                                    <ul class="level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all">
+                                        <li class="ui-menu-item"><a href="#">Acerca de y servicios</a>
+                                            <ul class="color-menu">
+                                                <li><a href="">Acerca de la agencia</a></li>
+                                                <li><a href="">Acerca de la apuesta en marcha</a></li>
+                                                <li><a href="">Agencia de servicio</a></li>
+                                                <li><a href="">Apuesta en marcha de servicio</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="ui-menu-item"><a href="#">Carreras</a>
+                                            <ul>
+                                                <li><a href="">Carreras</a></li>
+                                                <li><a href="">Carreras soltero</a></li>
+                                                <li><a href="">Contratanos</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="ui-menu-item"><a href="#">Ingresar Registrar</a>
+                                            <ul>
+                                                <li><a href="">Iniciar sesión simple</a></li>
+                                                <li><a href="">Registrarse simple</a></li>
+                                                <li><a href="">Recuperar cuenta</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="ui-menu-item"><a href="/contactenos">Contactenos</a>
+                                            <ul>
+                                                <li><a href="">Agencia de contactos</a></li>
+                                                <li><a href="">Contactos de negocios</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="ui-menu-item"><a href="#">Utilidades</a>
+                                            <ul>
+                                                <li><a href="">Ayudar</a></li>
+                                                <li><a href="">Precio</a></li>
+                                                <li><a href="">Terminos y condiciones</a></li>
+                                                <li><a href="">Politica de privacidad</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="ui-menu-item"><a href="#">Especialidades</a>
+                                            <ul>
+                                                <li><a href="">Prócimamente en breve pronto</a></li>
+                                                <li><a href="">Modo de mantenimiento</a></li>
+                                                <li><a href="">error 404</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="level0 level-top ui-menu-item">Nuestro Equipo</li>
+                                <li class="level0 level-top ui-menu-item">Contactenos</li>
+                            </ul>
+                        </nav>
+                    </div>
+                <?php endif ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,131 @@
+<!-- aqui esta el formulario en la verison html modificable desde el page builder-->
+<style>
+    .btoEnviar {
+        cursor: pointer;
+
+        align-content: center;
+        padding: .75rem 1rem;
+        font-size: 1.125rem;
+        border-radius: .3125rem;
+        color: #fff;
+        background-color: #008060;
+        border-color: #008060;
+        width: 100%
+    }
+
+
+    .form-sk {
+        width: 80%;
+        border: 1px solid rgba(0, 34, 28, 0.1);
+        box-shadow: solid 1px;
+        padding: 5%;
+        margin: 3%;
+        border-radius: 5px;
+
+    }
+
+    .sk-input {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        padding: 10px;
+        font-size: larger;
+        position: static;
+        width: 90%;
+        height: 45px;
+        left: 0px;
+        top: 0px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 34, 28, 0.1);
+        border-radius: 5px;
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 8px 0px;
+        text-align: center;
+
+    }
+
+
+    .sk-textarea {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 16% 20px;
+
+
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+     
+        font-size: larger;
+        position: static;
+        width: 90%;
+height: 200px;
+
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 34, 28, 0.1);
+        border-radius: 5px;
+
+        flex: none;
+
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 8px 0px;
+        text-align: center;
+    }
+    
+    .politicas-sk{
+    text-align: justify;
+}
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+
+
+    @media (min-width: 500px) {}
+</style>
+<form class="form-sk" action="" method="POST">
+    <div class="form-cont-sk">
+        <br>
+
+
+        <input class="sk-input" type="text" name="nombre" id="nombre" placeholder="Cual es tu Nombre?" required>
+        <br>
+
+        <input type="email" class="sk-input" name="email" id="email" placeholder="Cual es tu email?" required><br>
+
+
+        <input type="number" class="sk-input" name="numero" id="telefono" placeholder="cual es tu Numero telefonico?"
+            required><br>
+
+        <input class="sk-input" type="text" name="empresa" id="empresa" placeholder="Cual es tu empresas?" required><br>
+
+
+
+        <textarea class="sk-textarea" name="mensaje-cliente" placeholder="Cuentanos en que te podemos ayudar?"
+            required></textarea>
+        <br>
+        <label for="archivo">Tienes algo para mostrar</label>
+        <input type="file" id="archivo" name="archivo">
+
+        <br><br>
+        <div class="sk-resultado">
+
+
+            <input type="checkbox" name="terminos" class="terminos" id="terminos" required>
+            <label class="politicas-sk" for="terminos">Acepto la politica de
+                tratamiento
+                de datos Politicas de la privacidad terminos y condiciones</p>
+            </label>
+
+            <input class="btoEnviar" type="submit" value="ENVIAR MENSAJE">
+            <br>
+
+        </div>
+    </div>
+
+</form>

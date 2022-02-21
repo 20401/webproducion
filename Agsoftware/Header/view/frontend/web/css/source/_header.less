@@ -1,0 +1,65 @@
+
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .page-wrapper {  
+        .page-header {
+            margin-bottom: 20px;
+            border-bottom: unset;
+        }      
+        img.vista-desktop {
+            display: none;
+        }
+        img.vista-mobil {
+            display: block;
+            width: 55px;
+            height: 55px;
+            margin: 0 30px;
+        }
+        .logo {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        ul.navbar-nav {
+            font-size: 16px;
+        }
+        a.js-animation-link.btn.btn-ghost-secondary.btn-no-focus.me-2.me-lg-0 {
+            font-size: 16px;
+        }
+        a.js-animation-link.d-none.d-lg-inline-block.btn.btn-primary {
+            font-size: 16px;
+        }
+        .dropdown-menu {
+            font-size: 15px;
+        }
+        .navbar-brand-logo {
+            width: 100%;
+            min-width: 13.5rem;
+            max-width: 13.5rem;
+        }
+        .header {
+            .navegacion {
+                .lista {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-wrapper {
+        .page-header {
+            .header.content {
+                padding: 0;
+            }
+        }        
+      
+  }
+}
