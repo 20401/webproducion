@@ -52,11 +52,12 @@ class ServicesCMSPage
         $cmsPage = $this->pageInterfaceFactory->create();
 
         $blockHtmlContent = <<<HTML
-<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="6" type_name="CMS Static Block"}}</div>
-<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="7" type_name="CMS Static Block"}}</div>
-<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="8" type_name="CMS Static Block"}}</div>
-<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="9" type_name="CMS Static Block"}}</div>
-<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="10" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="servicesa" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="servicesb" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="servicesc" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="servicesd" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="bloquesitobanner" type_name="CMS Static Block"}}</div>
+<div data-content-type="block" data-appearance="default" data-element="main">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="servicesf" type_name="CMS Static Block"}}</div>
 HTML;
         $pageData = [
             'title' => 'ServicesPage',
