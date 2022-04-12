@@ -23,7 +23,7 @@ class HelpCenterBlock1V1 implements \Magento\Framework\Setup\Patch\DataPatchInte
         $this->blockByIdentifier = $blockByIdentifier;
     }
     /**
-     * {@inheritdoc}
+     *se agregan los bloques al modulo generando asi una forma de crear nuevos bloques estaticos o cms  {@inheritdoc}
      */
     public function apply()
     {
@@ -41,6 +41,65 @@ class HelpCenterBlock1V1 implements \Magento\Framework\Setup\Patch\DataPatchInte
         $block_head->setStores([0]);
         $this->blockRepository->save($block_head);
         $this->moduleDataSetup->getConnection()->endSetup();
+    
+    
+    
+     $block_data_head= [
+            'title' => 'HelpCenterA',
+            'identifier' => 'banner',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__ . '/html/HelpCenterBanner.html'),
+        ];
+
+        $this->makeBackup($block_data_head);
+        $block_head = $this->block->create();
+        $block_head->addData($block_data_head);
+        $block_head->setStores([0]);
+        $this->blockRepository->save($block_head);
+        $this->moduleDataSetup->getConnection()->endSetup();
+        
+        
+        $block_data_head= [
+            'title' => 'HelpCenterC',
+            'identifier' => 'block2',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__ . '/html/HelpCenterBlock2.html'),
+        ];
+        $this->makeBackup($block_data_head);
+        $block_head = $this->block->create();
+        $block_head->addData($block_data_head);
+        $block_head->setStores([0]);
+        $this->blockRepository->save($block_head);
+        $this->moduleDataSetup->getConnection()->endSetup();
+    
+    
+         $block_data_head= [
+            'title' => 'HelpCenterD',
+            'identifier' => 'block3',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__ . '/html/HelpCenterBlock3.html'),
+        ];
+        $this->makeBackup($block_data_head);
+        $block_head = $this->block->create();
+        $block_head->addData($block_data_head);
+        $block_head->setStores([0]);
+        $this->blockRepository->save($block_head);
+        $this->moduleDataSetup->getConnection()->endSetup();
+        
+        $block_data_head= [
+            'title' => 'Links',
+            'identifier' => 'bannerlink',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__ . '/html/HelpCenterBlockLink.html'),
+        ];
+        $this->makeBackup($block_data_head);
+        $block_head = $this->block->create();
+        $block_head->addData($block_data_head);
+        $block_head->setStores([0]);
+        $this->blockRepository->save($block_head);
+        $this->moduleDataSetup->getConnection()->endSetup();
+    
+    
     }
 
     public function makeBackup($data){
