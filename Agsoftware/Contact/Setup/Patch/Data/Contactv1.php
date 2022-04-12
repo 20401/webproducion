@@ -32,11 +32,10 @@ class HirePqrv5 implements \Magento\Framework\Setup\Patch\DataPatchInterface
         $data = [
           
             'title' => 'Hire Us',
-            'identifier' => 'hire-us2',
+            'identifier' => 'hire-us',
             
             'is_active' => 1,
            
-            
             'content' => file_get_contents(__DIR__.'/html/hire.html'),
 
         ];
