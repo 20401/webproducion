@@ -2,7 +2,7 @@
 
 namespace Agsoftware\HirePqr\Setup\Patch\Data;
 
-class HirePqrv5 implements \Magento\Framework\Setup\Patch\DataPatchInterface
+class Contactv2 implements \Magento\Framework\Setup\Patch\DataPatchInterface
 {
     /**
      * CreateHeaderpage constructor.
@@ -31,12 +31,12 @@ class HirePqrv5 implements \Magento\Framework\Setup\Patch\DataPatchInterface
         //code
         $data = [
           
-            'title' => 'Hire Us',
-            'identifier' => 'hire-us',
+            'title' => 'Contact',
+            'identifier' => 'contactv1',
             
             'is_active' => 1,
            
-            'content' => file_get_contents(__DIR__.'/html/hire.html'),
+            'content' => file_get_contents(__DIR__.'/html/Contacto.html'),
 
         ];
         
