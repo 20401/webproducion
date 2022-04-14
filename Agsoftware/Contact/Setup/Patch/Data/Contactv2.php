@@ -1,6 +1,6 @@
 <?php
 
-namespace Agsoftware\HirePqr\Setup\Patch\Data;
+namespace Agsoftware\Contact\Setup\Patch\Data;
 
 class Contactv2 implements \Magento\Framework\Setup\Patch\DataPatchInterface
 {
