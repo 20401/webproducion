@@ -2,7 +2,7 @@
 
 namespace Agsoftware\HelpCenter\Setup\Patch\Data;
 
-class HelpCenterBlock1V1 implements \Magento\Framework\Setup\Patch\DataPatchInterface
+class HelpCenterBlock1V3 implements \Magento\Framework\Setup\Patch\DataPatchInterface
 {
     /**
      * CreateHeaderBlock constructor.

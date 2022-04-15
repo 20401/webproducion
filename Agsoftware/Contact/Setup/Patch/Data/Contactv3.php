@@ -1,8 +1,8 @@
 <?php
 
-namespace Agsoftware\Error404\Setup\Patch\Data;
+namespace Agsoftware\Contact\Setup\Patch\Data;
 
-class Error404v1 implements \Magento\Framework\Setup\Patch\DataPatchInterface
+class Contactv3 implements \Magento\Framework\Setup\Patch\DataPatchInterface
 {
     /**
      * CreateHeaderpage constructor.
@@ -31,13 +31,12 @@ class Error404v1 implements \Magento\Framework\Setup\Patch\DataPatchInterface
         //code
         $data = [
           
-            'title' => 'Error404',
-            'identifier' => 'Error404',
+            'title' => 'Contacto',
+            'identifier' => 'contacto',
             
             'is_active' => 1,
            
-            
-            'content' => file_get_contents(__DIR__.'/html/error404.html'),
+            'content' => file_get_contents(__DIR__.'/html/Contacto.html'),
 
         ];
         
