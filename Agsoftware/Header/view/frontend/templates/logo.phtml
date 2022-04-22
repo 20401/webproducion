@@ -8,7 +8,7 @@
  * @var \Magento\Theme\Block\Html\Header\Logo $block
  */
 $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();
-$logo = $block->getViewFileUrl('Agsoftware_Header::images/nuevo-lgo.png');
+$logo = $block->getViewFileUrl('{{media url=wysiwyg/nuevo-logo_1.png}}');
 ?>
 <span data-action="toggle-nav" class="action nav-toggle"><span><?= $block->escapeHtml(__('Toggle Nav')) ?></span></span>
 
@@ -23,5 +23,5 @@ $logo = $block->getViewFileUrl('Agsoftware_Header::images/nuevo-lgo.png');
             <?= $block->getLogoWidth() ? 'width="' . $block->escapeHtmlAttr($block->getLogoWidth()) . '"' : '' ?>
             <?= $block->getLogoHeight() ? 'height="' . $block->escapeHtmlAttr($block->getLogoHeight()) . '"' : '' ?>
     />
-    <img class="vista-mobil" src="<?php echo $this->getViewFileUrl('Agsoftware_Header::images/bola.png'); ?>" alt="">
+    <img class="vista-mobil" src="<?php echo $this->getViewFileUrl('{{media url=wysiwyg/bola.png}}'); ?>" alt="wysiwyg">
 </a>

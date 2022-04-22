@@ -6,13 +6,6 @@
  */
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <link src="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" src_type="url" /> 
-        <css src="Agsoftware_Header::css/bootstrap-icons.css"/>
-        <css src="Agsoftware_Header::css/hs-mega-menu.min.css"/>
-        <css src="Agsoftware_Header::css/theme.min.css"/>
-
-    </head>
     <body>
         <referenceContainer name="header-wrapper" >
             <block class="Magento\Theme\Block\Html\Header\Logo" name="links-custom"
@@ -25,10 +18,7 @@
                 <argument name="template" xsi:type="string">Agsoftware_Header::sections.phtml</argument>
             </action>
         </referenceBlock>
-        <referenceBlock name="logo" remove="true"/> 
-        <referenceBlock name="header.panel.wrapper" remove="true" />
-        <referenceContainer name="copyright" remove="true"/>
-
+        <referenceBlock name="logo" template="Agsoftware_Header::logo.phtml"/> 
         <referenceContainer name="header-wrapper" remove="false"/>     
     </body>
 </page>
